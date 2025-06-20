@@ -23,4 +23,13 @@ public class UserService implements UserMapper {
 	public int InsertTest(UserDTO userDTO) {
 		return userMapper.InsertTest(userDTO);
 	}
+	
+	public int DeleteTest(int id) {
+		return userMapper.DeleteTest(id);
+	}
+	
+	public int UpdateTest(int id) {
+		return userMapper.UpdateTest(id);
+	}
+
 }

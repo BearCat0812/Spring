@@ -17,6 +17,8 @@
 			<tr>
 				<td>${user.id}</td>
 				<td>${user.test}</td>
+				<td><button onClick="UpdateTest(${user.id})">수정</button></td>
+				<td><button onClick="DeleteTest(${user.id})">삭제</button></td>
 			</tr>
 		</c:forEach>
 	</table>
@@ -26,3 +28,12 @@
 	</form>
 </body>
 </html>
+<script>
+	function DeleteTest(id){
+		location.href="/DeleteTest?id="+id // 쿼리스트링
+	}
+	
+	function UpdateTest(id){
+		location.href="/UpdateTest?id="+id
+	}
+</script>

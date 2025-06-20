@@ -10,4 +10,10 @@
 	<insert id="InsertTest" parameterType="UserDTO">
 		INSERT INTO todo (test) VALUES (#{test})
 	</insert>
+	<delete id="DeleteTest" parameterType="int">
+		DELETE FROM todo WHERE id = #{id}
+	</delete>
+	<update id="UpdateTest" parameterType="int">
+		UPDATE todo SET test = #{test} WHERE id = #{id}
+	</update>
 </mapper>

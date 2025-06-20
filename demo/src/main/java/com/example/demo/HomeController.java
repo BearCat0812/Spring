@@ -7,8 +7,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import com.example.demo.model.UserDTO;
 import com.example.demo.service.UserService;
 
@@ -43,6 +43,18 @@ public class HomeController {
 	@PostMapping("/InsertTest")
 	public String InsertTest(UserDTO userDTO) {
 		userService.InsertTest(userDTO);
+		return "redirect:/Test";
+	}
+	
+	@GetMapping("/DeleteTest")
+	public String DeleteTest(@RequestParam int id) {
+		userService.DeleteTest(id);
+		return "redirect:/Test";
+	}
+	
+	@GetMapping("/UpdateTest")
+	public String UpdateTest(@RequestParam int id) {
+		userService.UpdateTest(id);
 		return "redirect:/Test";
 	}
 	

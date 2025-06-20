@@ -9,4 +9,6 @@ import com.example.demo.model.UserDTO;
 public interface UserMapper {
 	List<UserDTO> getAllUser();
 	int InsertTest(UserDTO userDTO);
+	int DeleteTest(int id);
+	int UpdateTest(int id);
 }
