@@ -2,7 +2,7 @@ package com.example.demo.model;
 
 public class UserDTO {
 	private int id;
-	private String test;
+	private String text;
 	
 	public int getId() {
 		return id;
@@ -10,10 +10,10 @@ public class UserDTO {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getTest() {
-		return test;
+	public String getText() {
+		return text;
 	}
-	public void setTest(String test) {
-		this.test = test;
+	public void setText(String text) {
+		this.text = text;
 	}
 }

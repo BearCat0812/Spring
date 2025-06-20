@@ -16,27 +16,27 @@
 		<c:forEach items="${users}" var="user">
 			<tr>
 				<td>${user.id}</td>
-				<td>${user.test}</td>
-				<td><button onClick="UpdateTest(${user.id}, '${user.test}')">수정</button></td>
-				<td><button onClick="DeleteTest(${user.id})">삭제</button></td>
+				<td>${user.text}</td>
+				<td><button onClick="UpdateText(${user.id}, '${user.text}')">수정</button></td>
+				<td><button onClick="DeleteText(${user.id})">삭제</button></td>
 			</tr>
 		</c:forEach>
 	</table>
-	<form action="InsertTest" method="POST">
-		<input type="text" name="test">
+	<form action="InsertText" method="POST">
+		<input type="text" name="text">
 		<button type="submit">추가</button>
 	</form>
 </body>
 </html>
 <script>
-	function DeleteTest(id){
-		location.href="/DeleteTest?id="+id // 쿼리스트링
+	function DeleteText(id){
+		location.href="/DeleteText?id="+id // 쿼리스트링
 	}
 	
-	function UpdateTest(id, test){
-	    var newTest = prompt("새 값 입력:", test);
-	    if(newTest != null && newTest != ""){
-	        location.href="/UpdateTest?id=" + id + "&test=" + encodeURIComponent(newTest);
+	function UpdateText(id, text){
+	    var newText = prompt("새 값 입력:", text);
+	    if(newText != null && newText != ""){
+	        location.href="/UpdateText?id=" + id + "&text=" + encodeURIComponent(newText);
 	    }
 	}
 </script>

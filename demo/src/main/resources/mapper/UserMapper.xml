@@ -5,15 +5,15 @@
 	
 <mapper namespace="com.example.demo.mapper.UserMapper">
 	<select id="getAllUser" resultType="UserDTO">
-		SELECT * FROM todo
+		SELECT * FROM todolist
 	</select>
-	<insert id="InsertTest" parameterType="UserDTO">
-		INSERT INTO todo (test) VALUES (#{test})
+	<insert id="InsertText" parameterType="UserDTO">
+		INSERT INTO todolist (text) VALUES (#{text})
 	</insert>
-	<delete id="DeleteTest" parameterType="int">
-		DELETE FROM todo WHERE id = #{id}
+	<delete id="DeleteText" parameterType="int">
+		DELETE FROM todolist WHERE id = #{id}
 	</delete>
-	<update id="UpdateTest" parameterType="UserDTO">
-		UPDATE todo SET test = #{test} WHERE id = #{id}
+	<update id="UpdateText" parameterType="UserDTO">
+		UPDATE todolist SET text = #{text} WHERE id = #{id}
 	</update>
 </mapper>

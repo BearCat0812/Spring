@@ -33,29 +33,29 @@ public class HomeController {
 	@Autowired
 	private UserService userService; // 의존성 주입 - 필드주입
 	
-	@GetMapping("/Test")
+	@GetMapping("/Text")
 	public String Test(Model model) {
 		List<UserDTO> users = userService.getAllUser();
 		model.addAttribute("users",users);
 		return "DBTest";
 	}
 	
-	@PostMapping("/InsertTest")
-	public String InsertTest(UserDTO userDTO) {
-		userService.InsertTest(userDTO);
-		return "redirect:/Test";
+	@PostMapping("/InsertText")
+	public String InsertText(UserDTO userDTO) {
+		userService.InsertText(userDTO);
+		return "redirect:/Text";
 	}
 	
-	@GetMapping("/DeleteTest")
-	public String DeleteTest(@RequestParam int id) {
-		userService.DeleteTest(id);
-		return "redirect:/Test";
+	@GetMapping("/DeleteText")
+	public String DeleteText(@RequestParam int id) {
+		userService.DeleteText(id);
+		return "redirect:/Text";
 	}
 	
-	@GetMapping("/UpdateTest")
-	public String UpdateTest(UserDTO userDTO) {
-		userService.UpdateTest(userDTO);
-		return "redirect:/Test";
+	@GetMapping("/UpdateText")
+	public String UpdateText(UserDTO userDTO) {
+		userService.UpdateText(userDTO);
+		return "redirect:/Text";
 	}
 	
 }

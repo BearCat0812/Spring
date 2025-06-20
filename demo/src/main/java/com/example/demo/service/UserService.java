@@ -20,16 +20,16 @@ public class UserService implements UserMapper {
 		return userMapper.getAllUser();
 	}
 	
-	public int InsertTest(UserDTO userDTO) {
-		return userMapper.InsertTest(userDTO);
+	public int InsertText(UserDTO userDTO) {
+		return userMapper.InsertText(userDTO);
 	}
 	
-	public int DeleteTest(int id) {
-		return userMapper.DeleteTest(id);
+	public int DeleteText(int id) {
+		return userMapper.DeleteText(id);
 	}
 	
-	public int UpdateTest(UserDTO userDTO) {
-		return userMapper.UpdateTest(userDTO);
+	public int UpdateText(UserDTO userDTO) {
+		return userMapper.UpdateText(userDTO);
 	}
 
 }
