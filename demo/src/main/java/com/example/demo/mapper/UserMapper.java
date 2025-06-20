@@ -8,4 +8,5 @@ import com.example.demo.model.UserDTO;
 @Mapper
 public interface UserMapper {
 	List<UserDTO> getAllUser();
+	int InsertTest(UserDTO userDTO);
 }

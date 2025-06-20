@@ -19,4 +19,8 @@ public class UserService implements UserMapper {
 	public List<UserDTO> getAllUser(){
 		return userMapper.getAllUser();
 	}
+	
+	public int InsertTest(UserDTO userDTO) {
+		return userMapper.InsertTest(userDTO);
+	}
 }

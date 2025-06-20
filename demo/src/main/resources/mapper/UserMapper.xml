@@ -7,4 +7,7 @@
 	<select id="getAllUser" resultType="UserDTO">
 		SELECT * FROM todo
 	</select>
+	<insert id="InsertTest" parameterType="UserDTO">
+		INSERT INTO todo (test) VALUES (#{test})
+	</insert>
 </mapper>

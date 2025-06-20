@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,11 +14,15 @@
 			<th>Name</th>
 		</tr>
 		<c:forEach items="${users}" var="user">
-		<tr>
-			<td>${user.id}</td>
-			<td>${user.test}</td>
-		</tr>
+			<tr>
+				<td>${user.id}</td>
+				<td>${user.test}</td>
+			</tr>
 		</c:forEach>
 	</table>
+	<form action="InsertTest" method="POST">
+		<input type="text" name="test">
+		<button type="submit">추가</button>
+	</form>
 </body>
 </html>
