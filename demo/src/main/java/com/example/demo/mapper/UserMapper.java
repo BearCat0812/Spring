@@ -1,8 +1,9 @@
-package com.example.mapper;
+package com.example.demo.mapper;
 
 import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
-import com.example.model.UserDTO;
+
+import com.example.demo.model.UserDTO;
 
 @Mapper
 public interface UserMapper {

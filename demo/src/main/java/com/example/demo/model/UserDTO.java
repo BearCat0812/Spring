@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.demo.model;
 
 public class UserDTO {
 	private int id;
