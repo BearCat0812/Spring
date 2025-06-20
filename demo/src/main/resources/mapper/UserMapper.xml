@@ -13,7 +13,7 @@
 	<delete id="DeleteTest" parameterType="int">
 		DELETE FROM todo WHERE id = #{id}
 	</delete>
-	<update id="UpdateTest" parameterType="int">
+	<update id="UpdateTest" parameterType="UserDTO">
 		UPDATE todo SET test = #{test} WHERE id = #{id}
 	</update>
 </mapper>

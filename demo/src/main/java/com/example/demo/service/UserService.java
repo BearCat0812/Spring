@@ -28,8 +28,8 @@ public class UserService implements UserMapper {
 		return userMapper.DeleteTest(id);
 	}
 	
-	public int UpdateTest(int id) {
-		return userMapper.UpdateTest(id);
+	public int UpdateTest(int id, String test) {
+		return userMapper.UpdateTest(id, test);
 	}
 
 }
