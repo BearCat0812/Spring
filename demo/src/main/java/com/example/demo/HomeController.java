@@ -53,8 +53,8 @@ public class HomeController {
 	}
 	
 	@GetMapping("/UpdateTest")
-	public String UpdateTest(@RequestParam int id,@RequestParam String test) {
-		userService.UpdateTest(id, test);
+	public String UpdateTest(UserDTO userDTO) {
+		userService.UpdateTest(userDTO);
 		return "redirect:/Test";
 	}
 	

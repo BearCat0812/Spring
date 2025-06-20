@@ -10,5 +10,5 @@ public interface UserMapper {
 	List<UserDTO> getAllUser();
 	int InsertTest(UserDTO userDTO);
 	int DeleteTest(int id);
-	int UpdateTest(int id, String test);
+	int UpdateTest(UserDTO userDTO);
 }
