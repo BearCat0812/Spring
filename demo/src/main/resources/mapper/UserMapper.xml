@@ -8,12 +8,15 @@
 		SELECT * FROM todolist
 	</select>
 	<insert id="InsertText" parameterType="UserDTO">
-		INSERT INTO todolist (text) VALUES (#{text})
+		INSERT INTO todolist (text, date) VALUES (#{text}, #{date})
 	</insert>
 	<delete id="DeleteText" parameterType="int">
 		DELETE FROM todolist WHERE id = #{id}
 	</delete>
 	<update id="UpdateText" parameterType="UserDTO">
 		UPDATE todolist SET text = #{text} WHERE id = #{id}
+	</update>
+	<update id="Check">
+		UPDATE todolist SET checked = #{checked} WHERE id = #{id}
 	</update>
 </mapper>

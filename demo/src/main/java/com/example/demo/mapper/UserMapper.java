@@ -11,4 +11,5 @@ public interface UserMapper {
 	int InsertText(UserDTO userDTO);
 	int DeleteText(int id);
 	int UpdateText(UserDTO userDTO);
+	int Check(int id, Boolean checked);
 }

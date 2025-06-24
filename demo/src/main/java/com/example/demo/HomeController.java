@@ -58,4 +58,11 @@ public class HomeController {
 		return "redirect:/Text";
 	}
 	
+	@PostMapping("/Check")
+	public String Check(@RequestParam int id, @RequestParam(required = false) String checked) {
+	    boolean isChecked = (checked != null);
+	    userService.Check(id, isChecked);
+	    return "redirect:/Text";
+	}
+	
 }

@@ -31,5 +31,13 @@ public class UserService implements UserMapper {
 	public int UpdateText(UserDTO userDTO) {
 		return userMapper.UpdateText(userDTO);
 	}
+	
+	public int Check(int id, Boolean isChecked) {
+		if(isChecked) {
+	        return userMapper.Check(id, true);
+		} else {
+	        return userMapper.Check(id, false);
+		}
+	}
 
 }
